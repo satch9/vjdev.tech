@@ -24,7 +24,7 @@ describe('pré-rendu', () => {
   it('chaque étude de cas a son HTML complet', () => {
     for (const p of projects) {
       const html = read(`projets/${p.slug}/index.html`)
-      expect(html).toContain(`<title>${p.name} · Étude de cas`)
+      expect(html).toContain(`<title>${p.seoTitle ?? `${p.name} · Étude de cas`}`)
       expect(html).toContain(p.delivered[0].replace(/&/g, '&amp;'))
     }
   })

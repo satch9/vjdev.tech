@@ -148,7 +148,7 @@ describe('navigateur', () => {
   it('depuis l\'accueil, une carte de service ouvre sa page en haut avec le bon titre', async () => {
     const page = await browser.newPage()
     await page.goto(`${base}/`, { waitUntil: 'networkidle' })
-    const link = page.locator('#services a[href="/services/application-metier-sur-mesure"]')
+    const link = page.locator('#services li a[href="/services/application-metier-sur-mesure"]')
     await link.scrollIntoViewIfNeeded()
     await link.click()
     await page.waitForURL(`${base}/services/application-metier-sur-mesure`)

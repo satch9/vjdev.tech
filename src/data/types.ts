@@ -3,9 +3,20 @@ export type Capture = {
   alt: string
 }
 
+// Bloc de texte libre. Les paragraphes et les puces acceptent des liens au format [texte](/chemin)
+export type ContentSection = {
+  title: string
+  paragraphs?: string[]
+  items?: string[]
+  ordered?: boolean
+}
+
 export type Project = {
   slug: string
   name: string
+  seoTitle?: string
+  metaDescription?: string
+  sections?: ContentSection[]
   kind: 'client' | 'produit'
   sector: string
   summary: string
@@ -36,6 +47,7 @@ export type Service = {
   metaDescription: string
   h1: string
   intro: string
+  sections?: ContentSection[]
   audience: string[]
   deliverablesTitle: string
   deliverables: string[]

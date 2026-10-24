@@ -9,6 +9,15 @@ export const services: Service[] = [
     metaDescription: 'Un site vitrine clair, rapide et lisible sur téléphone pour votre entreprise ou association à La Réunion. Cadrage, développement et mise en ligne.',
     h1: 'Création de site vitrine à La Réunion',
     intro: 'Un site clair, rapide et lisible sur téléphone, pour qu\'on vous trouve et qu\'on vous contacte. Je pars de ce que vous faites et de ce que vos clients cherchent, puis je le mets en ligne.',
+    sections: [
+      {
+        title: 'Un site qui reçoit aussi vos demandes',
+        paragraphs: [
+          'Un site vitrine peut faire plus que présenter votre activité : il peut recueillir des demandes complètes, prêtes à traiter. C\'est ce que j\'ai mis en place pour une entreprise de transport, avec un formulaire guidé et un tableau de bord des demandes. Voir l\'exemple du [site de demandes de transport freightworkshop.re](/projets/freightworkshop).',
+          'Si vous devez gérer des données au quotidien (commandes, adhérents, stocks), il vous faut plutôt une [application métier sur mesure](/services/application-metier-sur-mesure).'
+        ]
+      }
+    ],
     audience: [
       'Artisans et indépendants qui veulent être trouvés sur Google',
       'Commerces et restaurants qui veulent montrer leur offre et leurs horaires',
@@ -61,7 +70,33 @@ export const services: Service[] = [
     seoTitle: 'Application métier sur mesure à La Réunion · Vincent',
     metaDescription: 'Caisse, réservations, commandes en ligne, suivi client : une application conçue pour votre façon de travailler. Développeur web à Saint-André, La Réunion.',
     h1: 'Application métier sur mesure à La Réunion',
-    intro: 'Quand les logiciels du marché ne collent pas à votre façon de travailler, je conçois un outil taillé pour vous : caisse, réservations, commandes, suivi client.',
+    intro: 'Quand un tableur devient ingérable ou qu\'un logiciel du marché vous oblige à contourner ses limites, je conçois un outil taillé pour votre façon de travailler : caisse, réservations, commandes, suivi client. Pour les clubs, commerces, restaurants et entreprises de l\'île.',
+    sections: [
+      {
+        title: 'Les signes qu\'un outil sur mesure vous ferait gagner du temps',
+        items: [
+          'Vous ressaisissez les mêmes informations dans deux ou trois fichiers.',
+          'Votre caisse, vos stocks et vos adhérents vivent dans des outils qui ne se parlent pas.',
+          'Un logiciel par abonnement vous facture des fonctions que vous n\'utilisez pas, et pas celle dont vous avez besoin.',
+          'Une seule personne sait comment « marche » le fichier Excel, et tout s\'arrête quand elle est absente.',
+          'Vos chiffres de fin de mois demandent une journée de compilation.'
+        ]
+      },
+      {
+        title: 'Exemple : une caisse pour un club de tennis de l\'île',
+        paragraphs: [
+          'Un club de tennis avait besoin de tenir sa caisse au quotidien et de préparer son bilan comptable. J\'ai développé une caisse web qui gère les encaissements en espèces, chèque et carte par sessions de caisse, les stocks avec alertes de réapprovisionnement, les comptes adhérents à crédit et débit, et les rapports pour le bilan. Chaque utilisateur a un rôle et des droits adaptés.',
+          'Le détail est dans l\'[étude de cas de la caisse du club de tennis](/projets/club1).'
+        ]
+      },
+      {
+        title: 'Sous le capot',
+        paragraphs: [
+          'J\'utilise des technologies standards et répandues : React et TypeScript pour l\'interface, Node.js et Express pour le serveur, MySQL pour les données. L\'application fonctionne dans le navigateur, sans installation, et un autre développeur peut la reprendre.',
+          'Besoin d\'automatiser une tâche précise plutôt que de créer une application complète ? Voir les [outils internes et l\'automatisation](/services/outils-internes-automatisation).'
+        ]
+      }
+    ],
     audience: [
       'Clubs et associations qui gèrent adhérents, encaissements et stocks',
       'Restaurants et commerces qui veulent prendre des commandes en ligne',
@@ -98,6 +133,10 @@ export const services: Service[] = [
         answer: 'L\'application est hébergée sur un serveur sécurisé, avec des accès par compte et par rôle. Les données sont sauvegardées régulièrement.'
       },
       {
+        question: 'Combien de temps faut-il pour une première version ?',
+        answer: 'Cela dépend de la complexité du projet. À titre d\'exemple, la première version d\'un outil de gestion récent m\'a demandé deux semaines. Le délai précis est fixé dans la note de cadrage, avant le développement.'
+      },
+      {
         question: 'Qui s\'occupe de l\'application après la mise en ligne ?',
         answer: 'Je reste votre interlocuteur pour les corrections et les évolutions.'
       }
@@ -110,7 +149,27 @@ export const services: Service[] = [
     seoTitle: 'Outils internes et automatisation à La Réunion · Vincent',
     metaDescription: 'Moins de ressaisie, moins de tableurs : des outils simples pour automatiser les tâches répétitives de votre entreprise ou association à La Réunion.',
     h1: 'Outils internes et automatisation à La Réunion',
-    intro: 'Ressaisies, tableurs copiés d\'un mois sur l\'autre, relances à la main : je conçois des outils simples qui prennent en charge vos tâches répétitives.',
+    intro: 'Copier des chiffres d\'un fichier à l\'autre, relancer les cotisations une par une, refaire le même récapitulatif chaque lundi : je conçois des outils simples qui prennent en charge ces tâches répétitives, pour les entreprises et associations de La Réunion.',
+    sections: [
+      {
+        title: 'Outil interne ou application métier ?',
+        paragraphs: [
+          'Une [application métier sur mesure](/services/application-metier-sur-mesure) gère toute une activité : caisse, commandes, adhérents. Un outil interne règle une seule tâche qui revient souvent. Il se livre plus vite, coûte moins cher, et c\'est souvent le bon point de départ.'
+        ]
+      },
+      {
+        title: 'Exemple : une liste de courses qui se remplit à partir des tickets de caisse',
+        paragraphs: [
+          'J\'ai développé une liste de courses partagée qui se remplit à partir des tickets de caisse, et se met à jour en direct sur deux téléphones. Le même principe s\'applique à une entreprise : lire des factures fournisseurs, des bons de livraison ou des notes de frais pour éviter de les ressaisir.'
+        ]
+      },
+      {
+        title: 'Combien de temps allez-vous gagner ?',
+        paragraphs: [
+          'Avant de développer, on chiffre ensemble : combien de fois la tâche revient, combien de minutes elle prend, qui la fait. Une saisie de 20 minutes par jour représente environ 75 heures par an. Si l\'outil coûte moins que ces heures, il est rentable ; sinon, je vous le dis.'
+        ]
+      }
+    ],
     audience: [
       'Les équipes qui ressaisissent les mêmes informations dans plusieurs fichiers',
       'Les gérants qui passent leurs soirées sur des tableurs',
@@ -140,6 +199,14 @@ export const services: Service[] = [
       {
         question: 'Mon équipe n\'est pas à l\'aise avec l\'informatique.',
         answer: 'L\'outil est conçu pour faire une chose simplement, avec le moins d\'écrans possible. Il s\'utilise depuis un navigateur ou un téléphone.'
+      },
+      {
+        question: 'Mes données restent-elles privées ?',
+        answer: 'Oui. L\'outil est hébergé sur un serveur sécurisé et n\'est accessible qu\'avec vos comptes.'
+      },
+      {
+        question: 'Et si le format de mes fichiers change ?',
+        answer: 'L\'outil est ajusté dans le cadre du suivi après la mise en ligne.'
       },
       {
         question: 'Combien ça coûte ?',

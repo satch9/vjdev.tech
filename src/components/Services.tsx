@@ -1,5 +1,8 @@
 import { Link } from 'react-router'
 import { services } from '../data/services'
+import { RichText } from './RichText'
+
+const servicesNote = 'Votre caisse, vos réservations ou vos commandes tiennent sur trois fichiers ? Je développe des [applications métier sur mesure](/services/application-metier-sur-mesure) qui les réunissent. Et pour une seule tâche répétitive, un [outil interne qui l\'automatise](/services/outils-internes-automatisation) suffit souvent.'
 
 export function Services() {
   return (
@@ -15,6 +18,7 @@ export function Services() {
           </li>
         ))}
       </ul>
+      <p className="max-w-[65ch] text-lg text-slate"><RichText text={servicesNote} /></p>
     </section>
   )
 }

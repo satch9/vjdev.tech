@@ -4,6 +4,7 @@ import { servicesForProject } from '../data/services'
 import { SiteHeader } from '../components/SiteHeader'
 import { ZoomableShot } from '../components/ZoomableShot'
 import { NotFound } from './NotFound'
+import { ContentSections } from '../components/RichText'
 
 export function CaseStudyPage() {
   const { slug = '' } = useParams()
@@ -48,6 +49,7 @@ export function CaseStudyPage() {
             {project.delivered.map((item) => <li key={item} className="border-l-4 border-lagon pl-3">{item}</li>)}
           </ul>
         </section>
+        {project.sections && <ContentSections sections={project.sections} />}
         <div className="grid gap-4 sm:grid-cols-2">
           {project.captures.map((capture, index) => (
             <ZoomableShot key={capture.src} capture={capture} sizes="(min-width: 1024px) 480px, (min-width: 640px) 50vw, 100vw" eager={index === 0} />
