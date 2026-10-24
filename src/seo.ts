@@ -117,8 +117,8 @@ export function getSeo(path: string): Seo {
   const project = projectMatch ? findProject(projectMatch[1]) : undefined
   if (project) {
     return {
-      title: `${project.name} · Étude de cas · Vincent, développeur web`,
-      description: project.summary,
+      title: project.seoTitle ?? `${project.name} · Étude de cas · Vincent, développeur web`,
+      description: project.metaDescription ?? project.summary,
       path: `/projets/${project.slug}`,
       image: ogImage(project),
       indexable: true,

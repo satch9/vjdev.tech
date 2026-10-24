@@ -4,6 +4,34 @@ export const projects: Project[] = [
   {
     slug: 'freightworkshop',
     name: 'freightworkshop.re',
+    seoTitle: 'freightworkshop.re, site de transport à La Réunion · Étude de cas',
+    metaDescription: 'Site de Freight Workshop, transport maritime, routier et ferroviaire : présentation des services, demandes en ligne et tableau de bord. Next.js, La Réunion.',
+    sections: [
+      {
+        title: 'Avant le site',
+        paragraphs: [
+          'Les demandes de transport arrivaient par e-mail, sans format commun, mêlées au reste de la messagerie.'
+        ]
+      },
+      {
+        title: 'Des demandes complètes, rangées dans un tableau de bord',
+        paragraphs: [
+          'Le formulaire de demande recueille d\'emblée les informations utiles au devis. Chaque demande est enregistrée en base de données, et Freight Workshop les retrouve toutes dans un tableau de bord dédié, au lieu de les chercher dans ses e-mails.'
+        ]
+      },
+      {
+        title: 'Choix techniques',
+        paragraphs: [
+          'Le site est développé avec Next.js et React. Les pages sont générées côté serveur : elles s\'affichent vite sur téléphone et sont lisibles immédiatement par les moteurs de recherche, ce qui compte pour une entreprise qui veut être trouvée.'
+        ]
+      },
+      {
+        title: 'Un besoin similaire ?',
+        paragraphs: [
+          'Vous recevez vos demandes par e-mail ou par téléphone et perdez du temps à les compléter ? Un [site vitrine avec formulaire de demande](/services/creation-site-vitrine) règle ce problème. Et si vous voulez gérer ces demandes jusqu\'au bout, c\'est une [application métier sur mesure](/services/application-metier-sur-mesure).'
+        ]
+      }
+    ],
     kind: 'client',
     sector: 'Logistique',
     summary: 'Un site pour présenter ses services et recevoir les demandes de transport en ligne.',
@@ -13,6 +41,7 @@ export const projects: Project[] = [
       'Site vitrine présentant les services maritime, routier et ferroviaire',
       'Formulaire de demande de transport',
       'Espace client avec connexion',
+      'Tableau de bord des demandes reçues, alimenté par la base de données',
       'Pages légales : CGV, mentions légales, confidentialité'
     ],
     stack: ['Next.js', 'React'],

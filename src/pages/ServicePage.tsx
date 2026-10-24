@@ -6,6 +6,7 @@ import type { Project } from '../data/types'
 import { SiteHeader } from '../components/SiteHeader'
 import { ProjectCard } from '../components/ProjectCard'
 import { Contact } from '../components/Contact'
+import { ContentSections } from '../components/RichText'
 import { NotFound } from './NotFound'
 
 export function ServicePage() {
@@ -52,6 +53,7 @@ export function ServicePage() {
             </ul>
           </section>
         </div>
+        {service.sections && <ContentSections sections={service.sections} />}
         <section className="flex flex-col gap-3">
           <h2 className="text-2xl font-bold">Comment ça se passe</h2>
           <p className="max-w-[60ch] text-lg">{service.process}</p>

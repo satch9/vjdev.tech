@@ -40,6 +40,19 @@ describe('projets', () => {
       expect(c.alt.length).toBeGreaterThan(10)
     }
   })
+  it('titles et descriptions personnalisés aux bonnes longueurs', () => {
+    for (const p of projects) {
+      if (p.seoTitle) expect(p.seoTitle.length, p.seoTitle).toBeLessThanOrEqual(65)
+      if (p.metaDescription) expect(p.metaDescription.length, p.metaDescription).toBeLessThanOrEqual(160)
+    }
+  })
+  it('les liens internes des textes mènent à des pages existantes', () => {
+    const paths = new Set(['/', ...projects.map((p) => `/projets/${p.slug}`), ...services.map((s) => `/services/${s.slug}`)])
+    const texts = [...projects, ...services].flatMap((x) => (x.sections ?? []).flatMap((sec) => [...(sec.paragraphs ?? []), ...(sec.items ?? [])]))
+    for (const text of texts) {
+      for (const [, href] of text.matchAll(/\]\((\/[^)]*)\)/g)) expect(paths.has(href), href).toBe(true)
+    }
+  })
   it('findProject renvoie undefined pour un slug inconnu', () => {
     expect(findProject('xyz')).toBeUndefined()
   })

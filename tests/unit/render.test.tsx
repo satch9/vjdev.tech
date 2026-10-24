@@ -93,6 +93,27 @@ describe('page de service', () => {
   })
 })
 
+describe('liens internes dans le texte', () => {
+  it('l\'accueil mène aux services depuis des phrases', () => {
+    const html = render('/')
+    const about = html.slice(html.indexOf('id="a-propos"'))
+    expect(about).toContain('href="/services/outils-internes-automatisation"')
+    const section = html.slice(html.indexOf('id="services"'), html.indexOf('</section>', html.indexOf('id="services"')))
+    expect(section).toContain('>applications métier sur mesure</a>')
+  })
+  it('les pages de service se renvoient l\'une à l\'autre', () => {
+    expect(render('/services/application-metier-sur-mesure')).toContain('href="/services/outils-internes-automatisation"')
+    expect(render('/services/outils-internes-automatisation')).toContain('href="/services/application-metier-sur-mesure"')
+    expect(render('/services/creation-site-vitrine')).toContain('>site de demandes de transport freightworkshop.re</a>')
+  })
+  it('freightworkshop : sections de texte et liens vers les services', () => {
+    const html = render('/projets/freightworkshop')
+    expect(html).toContain('Des demandes complètes, rangées dans un tableau de bord</h2>')
+    expect(html).toContain('href="/services/creation-site-vitrine"')
+    expect(html).not.toContain('](/')
+  })
+})
+
 describe('page introuvable', () => {
   it('slug inconnu', () => {
     expect(render('/projets/xyz')).toContain('Page introuvable')

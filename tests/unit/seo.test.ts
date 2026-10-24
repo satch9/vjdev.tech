@@ -38,6 +38,11 @@ describe('getSeo', () => {
     expect(data.itemListElement.map((i: { name: string }) => i.name)).toEqual(['Accueil', 'Réalisations', 'club1'])
     expect(data.itemListElement[2].item).toBe('https://vjdev.tech/projets/club1')
   })
+  it('étude de cas : title et description personnalisés', () => {
+    const seo = getSeo('/projets/freightworkshop')
+    expect(seo.title).toBe('freightworkshop.re, site de transport à La Réunion · Étude de cas')
+    expect(seo.description).toContain('Freight Workshop')
+  })
   it('page de service', () => {
     const seo = getSeo('/services/creation-site-vitrine')
     expect(seo.title).toBe('Création de site vitrine à La Réunion · Vincent, développeur web')
