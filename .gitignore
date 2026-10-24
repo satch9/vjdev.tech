@@ -1,0 +1,10 @@
+node_modules
+/dist
+/distSsr
+/releases
+/current
+test-results
+.superpowers
+.env.captures
+privateTerms.local.mjs
+docs/superpowers
