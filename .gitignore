@@ -8,3 +8,4 @@ test-results
 .env.captures
 privateTerms.local.mjs
 docs/superpowers
+/.sitemap-dates.json
