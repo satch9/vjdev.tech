@@ -54,8 +54,8 @@ describe('getSeo', () => {
     expect(graph[0].provider).toEqual({ '@id': 'https://vjdev.tech/#entreprise' })
     expect(graph[2].mainEntity).toHaveLength(6)
   })
-  it('service sans étude de cas : image de l\'accueil', () => {
-    expect(getSeo('/services/outils-internes-automatisation').image).toBe('https://vjdev.tech/captures/freightworkshop-1-og.jpg')
+  it('service : image de la première étude de cas liée', () => {
+    expect(getSeo('/services/outils-internes-automatisation').image).toBe('https://vjdev.tech/captures/plateforme-reunion-1-og.jpg')
     expect(getSeo('/services/application-metier-sur-mesure').image).toBe('https://vjdev.tech/captures/club1-1-og.jpg')
   })
   it('accepte une barre oblique finale', () => {
