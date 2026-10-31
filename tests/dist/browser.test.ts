@@ -152,7 +152,7 @@ describe('navigateur', () => {
     await link.scrollIntoViewIfNeeded()
     await link.click()
     await page.waitForURL(`${base}/services/application-metier-sur-mesure`)
-    await expect.poll(() => page.title()).toBe('Application métier sur mesure à La Réunion · Vincent')
+    await expect.poll(() => page.title()).toBe('Application métier sur mesure à La Réunion · VJDev')
     await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0)
     expect(await page.textContent('h1')).toBe('Application métier sur mesure à La Réunion')
     await page.close()
