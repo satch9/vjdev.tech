@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { getSeo, renderHead } from '../../src/seo'
+import { services } from '../../src/data/services'
 
 const homeTitle = 'Site internet et application sur mesure à La Réunion · Vincent'
 
@@ -57,6 +58,15 @@ describe('getSeo', () => {
   it('service : image de la première étude de cas liée', () => {
     expect(getSeo('/services/outils-internes-automatisation').image).toBe('https://vjdev.tech/captures/plateforme-reunion-1-og.jpg')
     expect(getSeo('/services/application-metier-sur-mesure').image).toBe('https://vjdev.tech/captures/club1-1-og.jpg')
+  })
+  it('service sans étude de cas : image de l\'accueil', () => {
+    // Plus aucun service réel sans projet lié : on en ajoute un le temps du test
+    services.push({ ...services[0], slug: 'service-sans-projet', relatedProjects: [] })
+    try {
+      expect(getSeo('/services/service-sans-projet').image).toBe('https://vjdev.tech/captures/freightworkshop-1-og.jpg')
+    } finally {
+      services.pop()
+    }
   })
   it('accepte une barre oblique finale', () => {
     expect(getSeo('/projets/club1/').title).toBe(getSeo('/projets/club1').title)
