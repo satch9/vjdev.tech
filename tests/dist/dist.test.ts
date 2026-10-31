@@ -17,7 +17,7 @@ function listFiles(dir: string): string[] {
 describe('pré-rendu', () => {
   it('accueil : contenu et head rendus', () => {
     const html = read('index.html')
-    expect(html).toContain('<title>Site internet et application sur mesure à La Réunion · Vincent</title>')
+    expect(html).toContain('<title>Site internet et application sur mesure à La Réunion · VJDev</title>')
     expect(html).toContain('id="realisations"')
     expect(html).not.toContain('<!--app-html-->')
   })

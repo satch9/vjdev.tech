@@ -5,7 +5,7 @@ export const services: Service[] = [
     slug: 'creation-site-vitrine',
     title: 'Sites vitrines',
     text: 'Un site clair, rapide et lisible sur téléphone, pour être trouvé et contacté.',
-    seoTitle: 'Création de site vitrine à La Réunion · Vincent, développeur web',
+    seoTitle: 'Création de site vitrine à La Réunion · VJDev',
     metaDescription: 'Un site vitrine clair, rapide et lisible sur téléphone pour votre entreprise ou association à La Réunion. Cadrage, développement et mise en ligne.',
     h1: 'Création de site vitrine à La Réunion',
     intro: 'Un site clair, rapide et lisible sur téléphone, pour qu\'on vous trouve et qu\'on vous contacte. Je pars de ce que vous faites et de ce que vos clients cherchent, puis je le mets en ligne.',

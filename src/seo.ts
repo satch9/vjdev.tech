@@ -14,7 +14,7 @@ export type Seo = {
   jsonLd: string | null
 }
 
-const homeTitle = 'Site internet et application sur mesure à La Réunion · Vincent'
+const homeTitle = 'Site internet et application sur mesure à La Réunion · VJDev'
 const homeDescription = 'Création de sites vitrines, d\'applications métier et d\'outils internes pour les entreprises et associations de La Réunion. Développeur basé à Saint-André.'
 const homeImage = `${siteUrl}/captures/freightworkshop-1-og.jpg`
 const businessId = `${siteUrl}/#entreprise`
@@ -117,7 +117,7 @@ export function getSeo(path: string): Seo {
   const project = projectMatch ? findProject(projectMatch[1]) : undefined
   if (project) {
     return {
-      title: project.seoTitle ?? `${project.name} · Étude de cas · Vincent, développeur web`,
+      title: project.seoTitle ?? `${project.name} · Étude de cas · VJDev`,
       description: project.metaDescription ?? project.summary,
       path: `/projets/${project.slug}`,
       image: ogImage(project),
@@ -139,7 +139,7 @@ export function getSeo(path: string): Seo {
     }
   }
   return {
-    title: 'Page introuvable · Vincent',
+    title: 'Page introuvable · VJDev',
     description: 'Cette adresse ne correspond à aucune page.',
     path: clean,
     image: homeImage,

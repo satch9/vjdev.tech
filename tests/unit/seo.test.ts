@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { getSeo, renderHead } from '../../src/seo'
 import { services } from '../../src/data/services'
 
-const homeTitle = 'Site internet et application sur mesure à La Réunion · Vincent'
+const homeTitle = 'Site internet et application sur mesure à La Réunion · VJDev'
 
 describe('getSeo', () => {
   it('accueil', () => {
@@ -32,7 +32,7 @@ describe('getSeo', () => {
   })
   it('étude de cas : fil d\'Ariane', () => {
     const seo = getSeo('/projets/club1')
-    expect(seo.title).toBe('club1 · Étude de cas · Vincent, développeur web')
+    expect(seo.title).toBe('club1 · Étude de cas · VJDev')
     expect(seo.image).toBe('https://vjdev.tech/captures/club1-1-og.jpg')
     const data = JSON.parse(seo.jsonLd!)
     expect(data['@type']).toBe('BreadcrumbList')
@@ -46,7 +46,7 @@ describe('getSeo', () => {
   })
   it('page de service', () => {
     const seo = getSeo('/services/creation-site-vitrine')
-    expect(seo.title).toBe('Création de site vitrine à La Réunion · Vincent, développeur web')
+    expect(seo.title).toBe('Création de site vitrine à La Réunion · VJDev')
     expect(seo.path).toBe('/services/creation-site-vitrine')
     expect(seo.indexable).toBe(true)
     expect(seo.image).toBe('https://vjdev.tech/captures/freightworkshop-1-og.jpg')
@@ -74,7 +74,7 @@ describe('getSeo', () => {
   })
   it('chemin inconnu : non indexable', () => {
     const seo = getSeo('/projets/xyz')
-    expect(seo.title).toBe('Page introuvable · Vincent')
+    expect(seo.title).toBe('Page introuvable · VJDev')
     expect(seo.indexable).toBe(false)
   })
   it('service inconnu : non indexable', () => {
