@@ -185,7 +185,7 @@ export const services: Service[] = [
       'Afficher vos indicateurs dans un tableau de bord à jour'
     ],
     process: 'On part d\'une tâche précise qui vous fait perdre du temps, je vous propose un outil qui la règle, puis on étend si c\'est utile.',
-    relatedProjects: [],
+    relatedProjects: ['plateforme-reunion'],
     relatedOtherProjects: ['Liste de courses partagée'],
     faq: [
       {

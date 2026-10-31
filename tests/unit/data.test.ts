@@ -117,5 +117,6 @@ describe('services', () => {
   it('servicesForProject : club1 relève de deux services', () => {
     expect(servicesForProject('club1').map((s) => s.slug)).toEqual(['creation-site-vitrine', 'application-metier-sur-mesure'])
     expect(servicesForProject('madoc').map((s) => s.slug)).toEqual(['application-metier-sur-mesure'])
+    expect(servicesForProject('plateforme-reunion').map((s) => s.slug)).toEqual(['application-metier-sur-mesure', 'outils-internes-automatisation'])
   })
 })
